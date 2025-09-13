@@ -52,9 +52,10 @@ jobs:
       - name: Install ActivitySim
         run: |
           uv pip uninstall activitysim
-          uv pip install --no-deps -e ./cloned/activitysim
+          uv pip install --no-deps ./cloned/activitysim
 
       - name: Test this implementation
         run: |
-          uv run pytest ./test
+          .venv/Scripts/activate
+          pytest ./test
           
