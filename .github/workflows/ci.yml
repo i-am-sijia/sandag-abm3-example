@@ -56,6 +56,6 @@ jobs:
 
       - name: Test this implementation
         run: |
-          ./.venv/Scripts/activate
+          source .venv/bin/activate
           pytest ./test
           
